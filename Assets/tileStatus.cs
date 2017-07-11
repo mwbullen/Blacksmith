@@ -13,23 +13,26 @@ public class tileStatus : MonoBehaviour {
 
 	}
 
-	void refreshSprite() {
+	/*void refreshSprite() {
 		Image imageComponent = gameObject.GetComponent<Image> ();
 
 		imageComponent.sprite = myTileInfo.mySprite;
-	}
+	}*/
 
 	public void setTileType(tileManagement.tileType newTileType) {
 		GameObject gameControl = GameObject.Find ("gameControl");
 
-		myTileInfo.mySprite = SpriteManager.getSprite(newTileType.ToString());
+	//	myTileInfo.mySprite = SpriteManager.getSprite(newTileType.ToString());
 			
 		//Texture2D myTexture = gameControl.GetComponent<tileManagement>().getTextureforTileType (newTileType);
 		//myTileInfo.imageTexture = myTexture;
 
 		myTileInfo.myTileType = newTileType;
 
-		refreshSprite ();
+		GameObject tileIcon = gameControl.GetComponent<tileManagement> ().getIconforType (newTileType.ToString ());
+
+		tileIcon.transform.SetParent (gameObject.transform);
+	//	refreshSprite ();
 	}
 	
 	// Update is called once per frame
