@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
+	public static GameObject tileBeingDragged;
+
 	Vector3 startPosition;	
 	#region IBeginDragHandler implementation
 
 	public void OnBeginDrag (PointerEventData eventData)
 	{
+		tileBeingDragged = gameObject;
 		startPosition = transform.position;
 	}
 
@@ -27,6 +30,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
 	public void OnEndDrag (PointerEventData eventData)
 	{
+		tileBeingDragged = null;
 		transform.position = startPosition;
 	}
 
