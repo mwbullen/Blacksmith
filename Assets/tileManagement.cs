@@ -9,7 +9,6 @@ public class tileManagement : MonoBehaviour {
 
 	public GameObject genericTilePrefab;
 
-	public List <Texture2D> tileTextures;
 
 	// Use this for initialization
 	void Start () {
@@ -20,18 +19,6 @@ public class tileManagement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-	}
-
-	public  Texture2D getTextureforTileType(tileType t) {
-		Texture2D newTileTexture = null;
-		foreach (Texture2D tmpTexture in tileTextures) {
-			Debug.Log (tmpTexture.name);
-			if (tmpTexture.name == t.ToString()) {
-				newTileTexture = tmpTexture;
-			}
-		}
-
-		return newTileTexture;
 	}
 
 	public GameObject createTile(tileType newTileType) {		

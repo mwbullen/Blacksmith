@@ -16,14 +16,16 @@ public class tileStatus : MonoBehaviour {
 	void refreshSprite() {
 		Image imageComponent = gameObject.GetComponent<Image> ();
 
-		imageComponent.sprite = Sprite.Create (myTileInfo.imageTexture, new Rect (0f, 0f, myTileInfo.imageTexture.width, myTileInfo.imageTexture.height), new Vector2 (.5f, .5f));
+		imageComponent.sprite = myTileInfo.mySprite;
 	}
 
 	public void setTileType(tileManagement.tileType newTileType) {
 		GameObject gameControl = GameObject.Find ("gameControl");
 
-		Texture2D myTexture = gameControl.GetComponent<tileManagement>().getTextureforTileType (newTileType);
-		myTileInfo.imageTexture = myTexture;
+		myTileInfo.mySprite = SpriteManager.getSprite(newTileType.ToString());
+			
+		//Texture2D myTexture = gameControl.GetComponent<tileManagement>().getTextureforTileType (newTileType);
+		//myTileInfo.imageTexture = myTexture;
 
 		myTileInfo.myTileType = newTileType;
 

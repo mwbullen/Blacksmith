@@ -683,6 +683,16 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 114263221698232514, guid: b6a3a8a3d0342534e9b2401ce6b2778b,
+        type: 2}
+      propertyPath: m_CellSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114263221698232514, guid: b6a3a8a3d0342534e9b2401ce6b2778b,
+        type: 2}
+      propertyPath: m_CellSize.y
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6a3a8a3d0342534e9b2401ce6b2778b, type: 2}
   m_IsPrefabParent: 0

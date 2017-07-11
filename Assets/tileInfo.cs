@@ -9,7 +9,8 @@ namespace AssemblyCSharp
 	{
 		public tileManagement.tileType myTileType;
 		public string Name;
-		public UnityEngine.Texture2D imageTexture;
+
+		public Sprite mySprite;
 		public UnityEngine.GameObject parentGameObject;
 
 		public tileInfo ()
