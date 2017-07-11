@@ -15,7 +15,16 @@ namespace AssemblyCSharp
 					return s;
 				}
 			}
+
 			return null;
+
+			/*
+			Sprite spriteTexture = (Sprite) Resources.Load (targetName);
+
+			Debug.Log (spriteTexture);
+			return (spriteTexture);
+			//return Sprite.Create(spriteTexture, new Rect(0f, 0f, spriteTexture.width, spriteTexture.height), new Vector2(.5f, .5f));
+			*/
 		}
 	}
 }

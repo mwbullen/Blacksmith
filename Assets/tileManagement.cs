@@ -12,7 +12,7 @@ public class tileManagement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject testTile =  createTile (tileType.iron_ingot);
+		//GameObject testTile =  createTile (tileType.iron_ingot);
 
 	}
 	
